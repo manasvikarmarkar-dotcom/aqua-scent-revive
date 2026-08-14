@@ -146,7 +146,38 @@
   }
 
   body {
-    background-color: var(--color-background);
+    background: var(--gradient-deep);
+    background-attachment: fixed;
     color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
   }
 }
+
+@utility text-gold {
+  color: var(--gold);
+}
+
+@utility tracking-brand {
+  letter-spacing: 0.32em;
+}
+
+@utility surface-panel {
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.05), oklch(1 0 0 / 0.01));
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(6px);
+}
+
+@utility text-aqua-gradient {
+  background: var(--gradient-aqua);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+

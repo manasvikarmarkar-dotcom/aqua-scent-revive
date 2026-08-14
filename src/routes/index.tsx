@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { fragrances } from "@/data/fragrances";
+import nobleScene from "@/assets/noble-aquatic-scene.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const hero = fragrances[0]!;
+  const hero = fragrances[1]!;
 
   return (
     <main>
@@ -52,7 +53,7 @@ function Home() {
       {fragrances.map((f) => (
         <section key={f.slug} className="relative h-[78vh] min-h-[460px] w-full overflow-hidden">
           <img
-            src={f.scene}
+            src={f.slug === "noble" ? nobleScene : f.scene}
             alt={`${f.name} campaign visual`}
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"

@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const [noble, ...rest] = fragrances;
+  const noble = fragrances[0]!;
 
   return (
     <main>
@@ -73,7 +73,7 @@ function Home() {
           The Four Parfums
         </h2>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {[noble, ...rest].map((f) => (
+          {fragrances.map((f) => (
             <Link
               key={f.slug}
               to="/parfum/$slug"

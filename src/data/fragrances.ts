@@ -1,3 +1,6 @@
+import nobleBottle from "@/assets/noble-bottle-aqua.png";
+import nobleScene from "@/assets/noble-aquatic-scene.jpg";
+
 export type Fragrance = {
   slug: string;
   name: string;
@@ -15,13 +18,12 @@ export type Fragrance = {
 export const fragrances: Fragrance[] = [
   {
     slug: "noble",
-    scene: "https://www.sarkar.store/cdn/shop/files/noble_6.webp?v=1785465305&width=3840",
+    scene: nobleScene,
     name: "NOBLE",
     tagline: "WEIGHTLESS. CLEAR. ENDLESS.",
     accord: "AQUATIC · MARINE · CLEAN",
     family: "Fresh Aquatic",
-    bottle:
-      "https://www.sarkar.store/cdn/shop/files/noble_8c3802da-24c2-4b48-85bb-d75cc4769fd3.png?v=1785759252&width=832",
+    bottle: nobleBottle,
     packaging: "https://www.sarkar.store/cdn/shop/files/03-412X799px.jpg?v=1784571804&width=369",
     description:
       "Noble is rebuilt as pure water on skin. Cold sea air, wet mineral stone and a transparent musk that reads like rain on glass — a fragrance that feels rinsed, quiet and endlessly breathable.",

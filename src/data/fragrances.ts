@@ -1,3 +1,6 @@
+import nobleBottle from "@/assets/noble-bottle-aqua.png";
+import nobleScene from "@/assets/noble-aquatic-scene.jpg";
+
 export type Fragrance = {
   slug: string;
   name: string;
@@ -5,6 +8,7 @@ export type Fragrance = {
   accord: string;
   family: string;
   bottle: string;
+  scene: string;
   packaging: string;
   description: string;
   notes: { top: string[]; heart: string[]; base: string[] };
@@ -14,12 +18,12 @@ export type Fragrance = {
 export const fragrances: Fragrance[] = [
   {
     slug: "noble",
+    scene: nobleScene,
     name: "NOBLE",
     tagline: "WEIGHTLESS. CLEAR. ENDLESS.",
     accord: "AQUATIC · MARINE · CLEAN",
     family: "Fresh Aquatic",
-    bottle:
-      "https://www.sarkar.store/cdn/shop/files/noble_8c3802da-24c2-4b48-85bb-d75cc4769fd3.png?v=1785759252&width=832",
+    bottle: nobleBottle,
     packaging: "https://www.sarkar.store/cdn/shop/files/03-412X799px.jpg?v=1784571804&width=369",
     description:
       "Noble is rebuilt as pure water on skin. Cold sea air, wet mineral stone and a transparent musk that reads like rain on glass — a fragrance that feels rinsed, quiet and endlessly breathable.",
@@ -32,6 +36,7 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "throne",
+    scene: "https://www.sarkar.store/cdn/shop/files/throne_homepage.png?v=1784620363&width=1500",
     name: "THRONE",
     tagline: "ABSOLUTE. DARK. UNRIVALLED.",
     accord: "WARM · LEATHER · AMBER",
@@ -50,6 +55,7 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "orion",
+    scene: "https://www.sarkar.store/cdn/shop/files/orion_4.webp?v=1783951644&width=3840",
     name: "ORION",
     tagline: "INFINITE. COLD. AMBITIOUS.",
     accord: "FRESH · CITRUS · AROMATIC",
@@ -67,6 +73,7 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "regal",
+    scene: "https://www.sarkar.store/cdn/shop/files/regal.webp?v=1782110791&width=3840",
     name: "REGAL",
     tagline: "ANCIENT. LIQUID. EMPIRE.",
     accord: "OUD · SMOKY · MUSK",

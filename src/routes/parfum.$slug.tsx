@@ -22,9 +22,13 @@ export const Route = createFileRoute("/parfum/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: fragrance.description.slice(0, 155) },
         { property: "og:type", content: "product" },
-        { property: "og:image", content: fragrance.bottle },
+        ...(fragrance.bottle.startsWith("http")
+          ? [{ property: "og:image", content: fragrance.bottle }]
+          : []),
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:image", content: fragrance.bottle },
+        ...(fragrance.bottle.startsWith("http")
+          ? [{ name: "twitter:image", content: fragrance.bottle }]
+          : []),
       ],
     };
   },

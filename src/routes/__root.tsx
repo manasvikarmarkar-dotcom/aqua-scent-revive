@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Karla:wght@300;400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
@@ -132,35 +132,61 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen">
-        <header className="sticky top-0 z-50 border-b border-border bg-background/70 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-            <Link to="/" className="tracking-brand text-sm">
-              SARKAR
-            </Link>
-            <nav className="tracking-brand flex gap-6 text-[10px] text-muted-foreground uppercase">
-              <Link to="/parfum/$slug" params={{ slug: "noble" }} className="hover:text-primary">
+        <div className="bg-background py-2 text-center text-[10px] tracking-[0.18em] uppercase">
+          Claim two 7ml freebies with every order
+        </div>
+        <header className="sticky top-0 z-50 bg-background/85 backdrop-blur">
+          <div className="relative flex items-center justify-between px-5 py-4 md:px-8">
+            <nav className="tracking-brand flex gap-5 text-[10px] text-muted-foreground uppercase">
+              <Link to="/parfum/$slug" params={{ slug: "noble" }} className="hover:text-foreground">
                 Noble
               </Link>
-              <Link to="/parfum/$slug" params={{ slug: "throne" }} className="hover:text-primary">
+              <Link
+                to="/parfum/$slug"
+                params={{ slug: "throne" }}
+                className="hidden hover:text-foreground sm:inline"
+              >
                 Throne
               </Link>
-              <Link to="/parfum/$slug" params={{ slug: "orion" }} className="hover:text-primary">
+              <Link
+                to="/parfum/$slug"
+                params={{ slug: "orion" }}
+                className="hidden hover:text-foreground sm:inline"
+              >
                 Orion
               </Link>
-              <Link to="/parfum/$slug" params={{ slug: "regal" }} className="hover:text-primary">
+              <Link
+                to="/parfum/$slug"
+                params={{ slug: "regal" }}
+                className="hidden hover:text-foreground sm:inline"
+              >
                 Regal
               </Link>
             </nav>
+            <Link
+              to="/"
+              className="absolute left-1/2 -translate-x-1/2 text-lg tracking-[0.45em] md:text-xl"
+            >
+              SARKAR
+            </Link>
+            <Link
+              to="/parfum/$slug"
+              params={{ slug: "noble" }}
+              className="border border-foreground/70 px-4 py-1.5 text-[10px] tracking-[0.18em] uppercase transition-colors hover:bg-foreground hover:text-background"
+            >
+              Buy Now
+            </Link>
           </div>
         </header>
 
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
 
-        <footer className="tracking-brand mt-24 border-t border-border px-6 py-10 text-center text-[10px] text-muted-foreground uppercase">
+        <footer className="tracking-brand border-t border-border px-6 py-12 text-center text-[10px] text-muted-foreground uppercase">
           SARKAR · Extrait de Parfum · 50ml
         </footer>
       </div>
+
     </QueryClientProvider>
   );
 }

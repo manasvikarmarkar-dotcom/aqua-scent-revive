@@ -77,23 +77,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SARKAR — Extrait de Parfum" },
+      {
+        name: "description",
+        content: "SARKAR parfum house: four extrait compositions in 50ml.",
+      },
+      { name: "author", content: "SARKAR" },
+      { property: "og:title", content: "SARKAR — Extrait de Parfum" },
+      {
+        property: "og:description",
+        content: "SARKAR parfum house: four extrait compositions in 50ml.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Karla:wght@300;400;500&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -119,8 +131,37 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen">
+        <header className="sticky top-0 z-50 border-b border-border bg-background/70 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+            <Link to="/" className="tracking-brand text-sm">
+              SARKAR
+            </Link>
+            <nav className="tracking-brand flex gap-6 text-[10px] text-muted-foreground uppercase">
+              <Link to="/parfum/$slug" params={{ slug: "noble" }} className="hover:text-primary">
+                Noble
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "throne" }} className="hover:text-primary">
+                Throne
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "orion" }} className="hover:text-primary">
+                Orion
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "regal" }} className="hover:text-primary">
+                Regal
+              </Link>
+            </nav>
+          </div>
+        </header>
+
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+
+        <footer className="tracking-brand mt-24 border-t border-border px-6 py-10 text-center text-[10px] text-muted-foreground uppercase">
+          SARKAR · Extrait de Parfum · 50ml
+        </footer>
+      </div>
     </QueryClientProvider>
   );
 }
+

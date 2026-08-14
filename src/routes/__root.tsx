@@ -131,8 +131,37 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen">
+        <header className="sticky top-0 z-50 border-b border-border bg-background/70 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+            <Link to="/" className="tracking-brand text-sm">
+              SARKAR
+            </Link>
+            <nav className="tracking-brand flex gap-6 text-[10px] text-muted-foreground uppercase">
+              <Link to="/parfum/$slug" params={{ slug: "noble" }} className="hover:text-primary">
+                Noble
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "throne" }} className="hover:text-primary">
+                Throne
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "orion" }} className="hover:text-primary">
+                Orion
+              </Link>
+              <Link to="/parfum/$slug" params={{ slug: "regal" }} className="hover:text-primary">
+                Regal
+              </Link>
+            </nav>
+          </div>
+        </header>
+
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+
+        <footer className="tracking-brand mt-24 border-t border-border px-6 py-10 text-center text-[10px] text-muted-foreground uppercase">
+          SARKAR · Extrait de Parfum · 50ml
+        </footer>
+      </div>
     </QueryClientProvider>
   );
 }
+

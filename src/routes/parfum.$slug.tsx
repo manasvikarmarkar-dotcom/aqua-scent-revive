@@ -106,7 +106,8 @@ function ParfumPage() {
               src={fragrance.packaging}
               alt={`${fragrance.name} outer carton packaging`}
               loading="lazy"
-              loading="lazy" decoding="async" className="mt-4 h-48 w-auto object-contain"
+              decoding="async"
+              className="mt-4 h-48 w-auto object-contain"
             />
           </div>
         </div>

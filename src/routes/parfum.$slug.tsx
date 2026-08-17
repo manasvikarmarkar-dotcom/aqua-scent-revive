@@ -54,6 +54,10 @@ function ParfumPage() {
           <img
             src={fragrance.bottle}
             alt={`${fragrance.name} parfum bottle`}
+            width={600}
+            height={600}
+            fetchPriority="high"
+            decoding="async"
             className="max-h-[460px] w-auto object-contain"
           />
         </div>
@@ -102,7 +106,7 @@ function ParfumPage() {
               src={fragrance.packaging}
               alt={`${fragrance.name} outer carton packaging`}
               loading="lazy"
-              className="mt-4 h-48 w-auto object-contain"
+              loading="lazy" decoding="async" className="mt-4 h-48 w-auto object-contain"
             />
           </div>
         </div>

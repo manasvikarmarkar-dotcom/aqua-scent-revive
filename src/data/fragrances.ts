@@ -1,5 +1,5 @@
-import nobleBottle from "@/assets/noble-bottle-aqua.png";
-import nobleScene from "@/assets/noble-aquatic-scene.jpg";
+import nobleBottle from "@/assets/noble-bottle-aqua.webp";
+import nobleScene from "@/assets/noble-aquatic-scene.webp";
 
 export type Fragrance = {
   slug: string;
@@ -36,13 +36,13 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "throne",
-    scene: "https://www.sarkar.store/cdn/shop/files/throne_homepage.png?v=1784620363&width=1500",
+    scene: "https://www.sarkar.store/cdn/shop/files/throne_homepage.png?v=1784620363&width=1200",
     name: "THRONE",
     tagline: "ABSOLUTE. DARK. UNRIVALLED.",
     accord: "WARM · LEATHER · AMBER",
     family: "Warm Leather",
     bottle:
-      "https://www.sarkar.store/cdn/shop/files/Throne_6459f77a-e801-4216-9fb1-4c7f1daad3ef.png?v=1777539866&width=1000",
+      "https://www.sarkar.store/cdn/shop/files/Throne_6459f77a-e801-4216-9fb1-4c7f1daad3ef.png?v=1777539866&width=600",
     packaging: "https://www.sarkar.store/cdn/shop/files/04-412X799px.jpg?v=1777551708&width=412",
     description:
       "A dark, commanding signature built on polished leather and resinous amber.",
@@ -55,13 +55,13 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "orion",
-    scene: "https://www.sarkar.store/cdn/shop/files/orion_4.webp?v=1783951644&width=3840",
+    scene: "https://www.sarkar.store/cdn/shop/files/orion_4.webp?v=1783951644&width=1200",
     name: "ORION",
     tagline: "INFINITE. COLD. AMBITIOUS.",
     accord: "FRESH · CITRUS · AROMATIC",
     family: "Fresh Citrus",
     bottle:
-      "https://www.sarkar.store/cdn/shop/files/Orion_62ec9098-e702-46a4-8a36-6d1931a1b8c2.png?v=1784572821&width=967",
+      "https://www.sarkar.store/cdn/shop/files/Orion_62ec9098-e702-46a4-8a36-6d1931a1b8c2.png?v=1784572821&width=600",
     packaging: "https://www.sarkar.store/cdn/shop/files/02-412X799px.jpg?v=1784570828&width=358",
     description: "Cold citrus and crisp aromatics under an open winter sky.",
     notes: {
@@ -73,13 +73,13 @@ export const fragrances: Fragrance[] = [
   },
   {
     slug: "regal",
-    scene: "https://www.sarkar.store/cdn/shop/files/regal.webp?v=1782110791&width=3840",
+    scene: "https://www.sarkar.store/cdn/shop/files/regal.webp?v=1782110791&width=1200",
     name: "REGAL",
     tagline: "ANCIENT. LIQUID. EMPIRE.",
     accord: "OUD · SMOKY · MUSK",
     family: "Oud Smoky",
     bottle:
-      "https://www.sarkar.store/cdn/shop/files/regal_168db6cc-97c6-4eaf-8578-43b94301e41a.png?v=1785759304&width=832",
+      "https://www.sarkar.store/cdn/shop/files/regal_168db6cc-97c6-4eaf-8578-43b94301e41a.png?v=1785759304&width=600",
     packaging: "https://www.sarkar.store/cdn/shop/files/01-412X799px.jpg?v=1784571659&width=401",
     description: "Smoked oud and dense musk — heavy, regal, unmistakable.",
     notes: {
